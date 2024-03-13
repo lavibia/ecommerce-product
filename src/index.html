@@ -1,48 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-    <title>Frontend Mentor | E-commerce product page</title>
-  
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
-    </style>
-  </head>
-  <body>
-  
-    Collections
-    Men
-    Women
-    About
-    Contact
-  
-    Sneaker Company
-  
-    Fall Limited Edition Sneakers
-  
-    These low-profile sneakers are your perfect casual wear companion. Featuring a 
-    durable rubber outer sole, they’ll withstand everything the weather can offer.
-  
-    $125.00
-    50%
-    $250.00
-  
-    0
-    Add to cart
-    
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/lavibia">Lavinia</a>.
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body>
+  <nav id="mobile-nav">
+    <ul>
+      <li><a href="#"></a>Collections</li>
+      <li><a href="#"></a>Men</li>
+      <li><a href="#"></a>Women</li>
+      <li><a href="#"></a>About</li>
+      <li><a href="3"></a>Contact</li>
+    </ul>
+  </nav>
+  <header>
+    <div class="left-header">
+      <button id="mobileMenu" type="button" aria-label="Open mobile navigation"><img
+          src="<%=require('./assets/icon-menu.svg')%>" alt="Open phone menu"></button>
+
+      <img id="logo" src="<%=require('./assets/logo.svg')%>" alt="Sneakers logo">
     </div>
-    <!--Accessability
+    <div class="right-header">
+      <button id="goToCart" type="button" aria-label="Open cart"><img src="<%=require('./assets/icon-cart.svg')%>"
+          alt="cart icon"></button>
+      <button id="profile" type="button" aria-label="See profile"><img src="<%=require('./assets/image-avatar.png')%>"
+          alt="Profile Picture"></button>
+    </div>
+  </header>
+  <main>
+    <div class="mobile-slideholder">
+      <button id="previousImg" type="button" aria-label="Show previeus image">
+        <img src="<%=require('./assets/icon-previous.svg')%>" alt="back arrow"></button>
 
-        Price: <span class="visually-hidden">original price</span><s>$200</s> <span class="visually-hidden">sale price</span>$100 
+      <div class="largeImages">
+        <img src="<%=require('./assets/image-product-1.jpg')%>" alt="Sneaker fall limited edition 1">
+        <img class="hidden" src="<%=require('./assets/image-product-2.jpg')%>" alt="Sneaker fall limited edition 2">
+        <img class="hidden" src="<%=require('./assets/image-product-3.jpg')%>" alt="Sneaker fall limited edition 3">
+        <img class="hidden" src="<%=require('./assets/image-product-4.jpg')%>" alt="Sneaker fall limited edition 4">
+      </div>
+      <button id="nextImg" type="button" aria-label="Show next image">
+        <img src="<%=require('./assets/icon-next.svg')%>" alt="next arrow"></button>
+    </div>
+    <div class="productDescriptionHolder">
+      <h3 class="company">SNEAKER COMPANY</h3>
+      <h1 class="productTitle">Fall Limited Edition Sneakers</h1>
+      <p> These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+    </div>
+    <div class="priceHolder">
+      <p id="price"><span class="sr-only">sale price</span>$125.00</p>
+      <p id="discount"><span class="sr-only">discount percent</span>50%</p>
+      <p id="oldprice"><span class="sr-only">original price</span><s>$250.00</s></p>
+    </div>
+
+    <form class="product-form" action="/cart/add" method="post">
+
+      <div class="item-quantity">
+        <button type="button" aria-label="Decrease quantity"> <img src="<%=require('./assets/icon-minus.svg')%>"
+            alt="Minus sign"></button>
+        <input type="number" name="quantity" value="0" min="1" max="9999" class="quantity" aria-label="Quantity" disabled>
+        <button type="button" aria-label="Increase quantity"> <img src="<%=require('./assets/icon-plus.svg')%>"
+            alt="Plus sign"></button>
+      </div>
+
+      <button id="btnCartSubmit" type="submit">
+        <span><img class="carticon" src="<%=require('./assets/icon-cart.svg')%>" alt="Add to Cart button"></span>
+        <span>Add to Cart</span>
+      </button>
+      </div>
+    </form>
+
+  </main>
+
+  <footer class="attribution">
+    <p>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>.
+   Coded by <a href="https://github.com/lavibia"> Lavinia</a>.</p>
+  </footer>
+  <!--Accessability
+
+        
      Alt Text for Enhanced Screen Reader Compatibility
 Alt text is crucial for visually impaired users who rely on screen readers. By providing descriptive alternative text for images, you not only make your e-commerce site more navigable for these users but also boost your SEO through improved image search rankings.
 
@@ -60,6 +106,7 @@ Include captions or transcripts for any multimedia content. This is vital for us
 
 6. Consistency in Navigation for Cognitive Accessibility
 A consistent and logical layout aids users with cognitive disabilities, making it easier for people to understand and navigate your site.-->
-    
+
 </body>
+
 </html>
