@@ -20,12 +20,13 @@
 }
 
 .sr-only {
-    position: absolute;
+    display: none;
+    /* position: absolute;
     left: -10000px;
     top: auto;
     width: 1px;
     height: 1px;
-    overflow: hidden;
+    overflow: hidden; */
 }
 
 .hidden {
@@ -38,10 +39,16 @@ body {
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
-    height: fit-content;
+    height: min-content;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(12, 1fr);
+}
+
+#desktop-nav,
+.desktop-slideholder,
+header hr{
+    display: none;
 }
 
 #mobile-nav {
@@ -56,6 +63,9 @@ header {
     justify-content: space-between;
 }
 
+#logo{
+    object-fit: contain;
+}
 header button {
     border: none;
     background: none;
@@ -196,19 +206,21 @@ h1{
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    padding: 24px;
+    padding: 0px 24px;
 }
 .item-quantity button, input{
     border: none;
     background: none;
-    width: fit-content;
+    width: 5ch;
     height: fit-content;
     display: flex;
     justify-content: center;
+    flex-wrap:wrap;
     align-items: center;
     color: var(--black);
     font-weight: 700;
     font-size: 16px;
+    text-align: right;
 }
 #btnCartSubmit{
     color: var(--white);
@@ -219,7 +231,7 @@ h1{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 10px;
     height: 56px;
     width: 100%;
     border: none;
@@ -244,6 +256,127 @@ footer {
 }
 footer a{
     color: var(--white);
+}
+@media only screen and (min-width: 940px){
+    #mobile-nav,
+    #mobileMenu,
+    .mobile-slideholder
+    {
+        display:none;
+    }
+     body{
+    grid-template-rows: repeat(6, 1fr);
+     }
+    header{
+        max-width: 1110px;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .left-header{
+        grid-area: 1/1/2/2;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between ;
+        align-items: flex-start;
+        gap: 50px;
+    }
+    .right-header{
+        grid-area: 1/2/2/3;
+        display: flex;
+        align-items: flex-start;
+        justify-content: end;
+    }
+    header hr{
+        width: 100%;
+        display: block;
+        grid-area: 2/1/3/3;
+        align-self: flex-start;
+        border: 1px solid var(--neutral-light-blue);
+    }
+    
+    #desktop-nav{
+        display: flex;
+    }
+    #desktop-nav ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 24px;
+    }
+    #desktop-nav li{
+        padding-bottom: 24px;
+    }
+    main{
+        grid-area: 2/1/6/7;
+        height: fit-content;
+        max-width: 1110px;
+        justify-self: center;
+        margin: 0px 8vw;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(8,65px);
+        column-gap: 70px;
+    }
+    footer{
+        grid-area: 6/1/7/7;
+    }
+    .desktop-slideholder{
+        grid-area: 1/1/9/4;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: flex-start;
+
+    }
+    .largeImages img{
+        border-radius: 10px;
+    }
+    .desktop-slideholder .thumbnails{
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+    .thumbnails img{
+        width: calc(25% - 18px);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px ;
+    }
+    .productDescriptionHolder{
+        grid-area: 1/4/6/7;
+    }
+    .priceHolder{
+        grid-area: 6/4/7/7;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-top: 0px;
+        row-gap: 10px;
+    }
+    #price{
+        grid-area: 1/1/2/2;
+        margin-right: 24px;
+    }
+    #discount{
+        grid-area: 1/1/2/2;
+    }
+    .priceHolder #oldprice{
+        text-align: left;
+        grid-area: 2/1/3/2;
+    }
+    .product-form{
+        grid-area: 7/4/8/7;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .product-form .item-quantity{
+        width: 145px;
+    }
+
 }
 
 /* ## Layout
