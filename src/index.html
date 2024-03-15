@@ -28,6 +28,15 @@
           src="<%=require('./assets/icon-menu.svg')%>" alt="Open phone menu"></button>
 
       <img id="logo" src="<%=require('./assets/logo.svg')%>" alt="Sneakers logo">
+      <nav id="desktop-nav">
+        <ul>
+          <li><a href="#"></a>Collections</li>
+          <li><a href="#"></a>Men</li>
+          <li><a href="#"></a>Women</li>
+          <li><a href="#"></a>About</li>
+          <li><a href="3"></a>Contact</li>
+        </ul>
+      </nav>
     </div>
     <div class="right-header">
       <button id="goToCart" type="button" aria-label="Open cart"><img src="<%=require('./assets/icon-cart.svg')%>"
@@ -35,6 +44,7 @@
       <button id="profile" type="button" aria-label="See profile"><img src="<%=require('./assets/image-avatar.png')%>"
           alt="Profile Picture"></button>
     </div>
+    <hr>
   </header>
   <main>
     <div class="mobile-slideholder">
@@ -49,6 +59,20 @@
       </div>
       <button id="nextImg" type="button" aria-label="Show next image">
         <img src="<%=require('./assets/icon-next.svg')%>" alt="next arrow"></button>
+    </div>
+    <div class="desktop-slideholder">
+      <div class="largeImages">
+        <img src="<%=require('./assets/image-product-1.jpg')%>" alt="Sneaker fall limited edition 1">
+        <img class="hidden" src="<%=require('./assets/image-product-2.jpg')%>" alt="Sneaker fall limited edition 2">
+        <img class="hidden" src="<%=require('./assets/image-product-3.jpg')%>" alt="Sneaker fall limited edition 3">
+        <img class="hidden" src="<%=require('./assets/image-product-4.jpg')%>" alt="Sneaker fall limited edition 4">
+      </div>
+      <div class="thumbnails">
+        <img src="<%=require('./assets/image-product-1-thumbnail.jpg')%>" alt="Sneaker fall limited edition 1">
+        <img src="<%=require('./assets/image-product-2-thumbnail.jpg')%>" alt="Sneaker fall limited edition 2">
+        <img src="<%=require('./assets/image-product-3-thumbnail.jpg')%>" alt="Sneaker fall limited edition 3">
+        <img src="<%=require('./assets/image-product-4-thumbnail.jpg')%>" alt="Sneaker fall limited edition 4">
+      </div>
     </div>
     <div class="productDescriptionHolder">
       <h3 class="company">SNEAKER COMPANY</h3>
