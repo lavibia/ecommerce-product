@@ -400,6 +400,11 @@ footer a {
         gap: 24px;
     }
 
+    .focus-img{
+        opacity: 0.3;
+        border: 3px solid var(--primary-orange);
+       
+    }
     .thumbnails img {
         width: calc(25% - 18px);
         height: 100%;
