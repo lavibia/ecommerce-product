@@ -1,4 +1,6 @@
 import styles from './style.css'
+/* when menu nav is open apply to body 
+    overflow: hidden; */
 /*
 Your users should be able to:
 
