@@ -1,5 +1,9 @@
 import styles from './style.css'
+/* when menu nav is open apply to body 
+    overflow: hidden; */
 /*
+
+// when thumbnail is click apply class .focus-img
 Your users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
