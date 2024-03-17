@@ -15,16 +15,17 @@
 <body>
   <nav id="mobile-nav">
     <div class="nav-container">
-    <button id="nav-exit" type="button" aria-label="Exit mobile menu"> <img src="<%=require('./assets/icon-close.svg')%>"  alt="exit icon"></button>
-    <ul>
-      <li><a href="#"></a>Collections</li>
-      <li><a href="#"></a>Men</li>
-      <li><a href="#"></a>Women</li>
-      <li><a href="#"></a>About</li>
-      <li><a href="3"></a>Contact</li>
-    </ul>
-      
-  </div>
+      <button id="nav-exit" type="button" aria-label="Exit mobile menu"> <img
+          src="<%=require('./assets/icon-close.svg')%>" alt="exit icon"></button>
+      <ul>
+        <li><a href="#"></a>Collections</li>
+        <li><a href="#"></a>Men</li>
+        <li><a href="#"></a>Women</li>
+        <li><a href="#"></a>About</li>
+        <li><a href="3"></a>Contact</li>
+      </ul>
+
+    </div>
   </nav>
   <header>
     <div class="left-header">
@@ -45,6 +46,16 @@
     <div class="right-header">
       <button id="goToCart" type="button" aria-label="Open cart"><img src="<%=require('./assets/icon-cart.svg')%>"
           alt="cart icon"></button>
+      <div id="cart-holder">
+        <h5>Cart</h5>
+        <hr>
+        <ul id="cartItems">
+
+        </ul>
+        <button id="btnCheckout" type="button" aria-label="Go to checkout">Checkout</button>
+        <p id="emptyCart">Your cart is empty.</p>
+
+      </div>
       <button id="profile" type="button" aria-label="See profile"><img src="<%=require('./assets/image-avatar.png')%>"
           alt="Profile Picture"></button>
     </div>
@@ -72,7 +83,8 @@
         <img class="hidden" src="<%=require('./assets/image-product-4.jpg')%>" alt="Sneaker fall limited edition 4">
       </div>
       <div class="thumbnails">
-        <img class="focus-img" src="<%=require('./assets/image-product-1-thumbnail.jpg')%>" alt="Sneaker fall limited edition 1">
+        <img class="focus-img" src="<%=require('./assets/image-product-1-thumbnail.jpg')%>"
+          alt="Sneaker fall limited edition 1">
         <img src="<%=require('./assets/image-product-2-thumbnail.jpg')%>" alt="Sneaker fall limited edition 2">
         <img src="<%=require('./assets/image-product-3-thumbnail.jpg')%>" alt="Sneaker fall limited edition 3">
         <img src="<%=require('./assets/image-product-4-thumbnail.jpg')%>" alt="Sneaker fall limited edition 4">
@@ -95,7 +107,8 @@
       <div class="item-quantity">
         <button type="button" aria-label="Decrease quantity"> <img src="<%=require('./assets/icon-minus.svg')%>"
             alt="Minus sign"></button>
-        <input type="number" name="quantity" value="0" min="1" max="9999" class="quantity" aria-label="Quantity" disabled>
+        <input type="number" name="quantity" value="0" min="1" max="9999" class="quantity" aria-label="Quantity"
+          disabled>
         <button type="button" aria-label="Increase quantity"> <img src="<%=require('./assets/icon-plus.svg')%>"
             alt="Plus sign"></button>
       </div>
@@ -111,8 +124,8 @@
 
   <footer class="attribution">
     <p>
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>.
-   Coded by <a href="https://github.com/lavibia"> Lavinia</a>.</p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>.
+      Coded by <a href="https://github.com/lavibia"> Lavinia</a>.</p>
   </footer>
   <!--Accessability
 
