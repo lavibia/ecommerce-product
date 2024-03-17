@@ -311,7 +311,7 @@ input {
     border: none;
     background: none;
     width: 5ch;
-    height: fit-content;
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

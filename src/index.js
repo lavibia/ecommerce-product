@@ -1,5 +1,55 @@
 import styles from './style.css'
 
+let prdName = document.querySelector('.productDescriptionHolder>.productTitle').textContent;
+
+console.log(prdName);
+
+let prdPrice = parseFloat(document.querySelector('.priceHolder>#price')
+        .textContent.slice(document.querySelector('.priceHolder>#price')
+        .textContent.indexOf('$')+1));
+console.log(prdPrice);
+
+let prdForm = document.querySelector('.product-form');
+console.log(prdForm);
+let btnMinus = prdForm.querySelectorAll('button')[0];
+let quantityInput = prdForm.querySelector('input');
+let btnPlus = prdForm.querySelectorAll('button')[1];
+console.log(btnMinus);
+console.log(quantityInput);
+console.log(btnPlus);
+
+btnMinus.addEventListener('click', decreaseQuantity=>{
+    let value = parseInt(quantityInput.value);
+    console.log(value);
+    if(value>=1){
+
+        value-=1;
+        console.log(value);
+    }
+    else{
+
+        value=0;
+        console.log(value);
+    }
+    console.log(value);
+
+    quantityInput.value=value;
+
+});
+btnPlus.addEventListener('click', increaseQuantity=>{
+    let value = parseInt(quantityInput.value);
+    if(value <= 100){
+        value+=1;
+        console.log(value);
+    }
+    else{
+        value=100;
+        console.log(value);
+    }
+    console.log(value);
+    quantityInput.value=value;
+
+});
 
 
 
