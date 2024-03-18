@@ -85,11 +85,14 @@ btnAddToCArt.addEventListener('click', (event) => {
 
 
 function addProductToCart(quantity) {
+    document.getElementById('cartNotification').style.display='block'
+    document.getElementById('cartNotification').textContent=quantity;
     if (listCart.children.length == 0) {
         listCart.display='flex';
         document.querySelector('#btnCheckout').style.display='block';
         document.querySelector('#emptyCart').style.display='none'
         createItemCart(quantity);
+        
     }else{
         updateItemCart(quantity);
     }
@@ -143,7 +146,8 @@ function deleteItemCart(){
     listCart.innerHTML='';
     listCart.display='none';
     document.querySelector('#btnCheckout').style.display='none';
-    document.querySelector('#emptyCart').style.display='flex'
+    document.querySelector('#emptyCart').style.display='flex';
+    document.getElementById('cartNotification').style.display='none'
 }
 
 /* when menu nav is open apply to body 
