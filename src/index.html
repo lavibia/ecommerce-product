@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./assets/favicon-32x32.png')%>">
 
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
@@ -45,7 +45,7 @@
     </div>
     <div class="right-header">
       <button id="goToCart" type="button" aria-label="Open cart"><img src="<%=require('./assets/icon-cart.svg')%>"
-          alt="cart icon"></button>
+          alt="cart icon"><div id="cartNotification"></div></button>
       <div id="cart-holder">
         <h5>Cart</h5>
         <hr>
