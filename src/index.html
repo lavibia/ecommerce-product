@@ -62,7 +62,7 @@
   </header>
   <main>
     <div class="mobile-slideholder">
-      <button id="previousImg" type="button" aria-label="Show previeus image">
+      <button class="previousImg" type="button" aria-label="Show previeus image">
         <img src="<%=require('./assets/icon-previous.svg')%>" alt="back arrow"></button>
 
       <div class="largeImages">
@@ -71,7 +71,7 @@
         <img class="hidden" src="<%=require('./assets/image-product-3.jpg')%>" alt="Sneaker fall limited edition 3">
         <img class="hidden" src="<%=require('./assets/image-product-4.jpg')%>" alt="Sneaker fall limited edition 4">
       </div>
-      <button id="nextImg" type="button" aria-label="Show next image">
+      <button class="nextImg" type="button" aria-label="Show next image">
         <img src="<%=require('./assets/icon-next.svg')%>" alt="next arrow"></button>
     </div>
     <div class="desktop-slideholder">
@@ -82,6 +82,28 @@
         <img class="hidden" src="<%=require('./assets/image-product-4.jpg')%>" alt="Sneaker fall limited edition 4">
       </div>
       <div class="thumbnails">
+        <img class="focus-img" src="<%=require('./assets/image-product-1-thumbnail.jpg')%>"
+          alt="Sneaker fall limited edition 1">
+        <img src="<%=require('./assets/image-product-2-thumbnail.jpg')%>" alt="Sneaker fall limited edition 2">
+        <img src="<%=require('./assets/image-product-3-thumbnail.jpg')%>" alt="Sneaker fall limited edition 3">
+        <img src="<%=require('./assets/image-product-4-thumbnail.jpg')%>" alt="Sneaker fall limited edition 4">
+      </div>
+    </div>
+    <div class="lightbox">
+      <div class="lightbox-largeImg">
+        <button id="previousImg" type="button" aria-label="Show previeus image">
+          <img src="<%=require('./assets/icon-previous.svg')%>" alt="back arrow"></button>
+  
+        <div class="largeImages">
+          <img src="<%=require('./assets/image-product-1.jpg')%>" alt="Sneaker fall limited edition 1">
+          <img class="hidden" src="<%=require('./assets/image-product-2.jpg')%>" alt="Sneaker fall limited edition 2">
+          <img class="hidden" src="<%=require('./assets/image-product-3.jpg')%>" alt="Sneaker fall limited edition 3">
+          <img class="hidden" src="<%=require('./assets/image-product-4.jpg')%>" alt="Sneaker fall limited edition 4">
+        </div>
+        <button id="nextImg" type="button" aria-label="Show next image">
+          <img src="<%=require('./assets/icon-next.svg')%>" alt="next arrow"></button>
+      </div>
+      <div class="lightbox-thumbnails">
         <img class="focus-img" src="<%=require('./assets/image-product-1-thumbnail.jpg')%>"
           alt="Sneaker fall limited edition 1">
         <img src="<%=require('./assets/image-product-2-thumbnail.jpg')%>" alt="Sneaker fall limited edition 2">
