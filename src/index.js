@@ -89,95 +89,98 @@ let mBtnNext = mobileSlideHolder.children[2];
 let mLargeImg = mobileSlideHolder.children[1].children;
 
 let slideIndex = 1;
-showSlide(slideIndex,mLargeImg);
+showSlide(slideIndex, mLargeImg);
 
-mBtnPrevious.addEventListener('click', ()=>{
-    showSlide(slideIndex -= 1,mLargeImg);
+mBtnPrevious.addEventListener('click', () => {
+    showSlide(slideIndex -= 1, mLargeImg);
 });
-mBtnNext.addEventListener('click', ()=>{
-    showSlide(slideIndex += 1,mLargeImg);
+mBtnNext.addEventListener('click', () => {
+    showSlide(slideIndex += 1, mLargeImg);
 });
 
-let desktopSlideHolder=document.querySelector('.desktop-slideholder');
-let dLargeImg= desktopSlideHolder.children[0].children;
-let dthumbnails= desktopSlideHolder.children[1].children;
-for(let i=0; i<dthumbnails.length;i++){
-    dthumbnails[i].addEventListener('click', ()=>{
+let desktopSlideHolder = document.querySelector('.desktop-slideholder');
+let dLargeImg = desktopSlideHolder.children[0].children;
+let dthumbnails = desktopSlideHolder.children[1].children;
+for (let i = 0; i < dthumbnails.length; i++) {
+    dthumbnails[i].addEventListener('click', () => {
         console.log('hi')
-        showSlide(slideIndex=i+1 , dLargeImg);
-        focusThumnail(slideIndex,dthumbnails);
+        showSlide(slideIndex = i + 1, dLargeImg);
+        focusThumnail(slideIndex, dthumbnails);
     })
 }
-let lightbox =document.querySelector('.lightbox');
+let lightbox = document.querySelector('.lightbox');
+let btnCloseLightbox = lightbox.children[0];
 
-for(let i=0;i<dLargeImg.length;i++){
-    dLargeImg[i].addEventListener('click', ()=>{
+btnCloseLightbox.addEventListener('click', closeLightbox);
+
+for (let i = 0; i < dLargeImg.length; i++) {
+    dLargeImg[i].addEventListener('click', () => {
         openLightbox(i);
+
     })
 }
 
-let lLargeImg=lightbox.children[0].children[1].children;
-let lthumbnails=lightbox.children[1].children;
-let lBtnPrevious=lightbox.children[0].children[0];
-let lBtnNext=lightbox.children[0].children[2];
-lBtnPrevious.addEventListener('click', ()=>{
-    showSlide(slideIndex -= 1,lLargeImg);
-    focusThumnail(slideIndex,lthumbnails)
+let lLargeImg = lightbox.children[1].children[1].children;
+let lthumbnails = lightbox.children[2].children;
+let lBtnPrevious = lightbox.children[1].children[0];
+let lBtnNext = lightbox.children[1].children[2];
+lBtnPrevious.addEventListener('click', () => {
+    showSlide(slideIndex -= 1, lLargeImg);
+    focusThumnail(slideIndex, lthumbnails)
 });
-lBtnNext.addEventListener('click', ()=>{
-    showSlide(slideIndex += 1,lLargeImg);
-    focusThumnail(slideIndex,lthumbnails)
+lBtnNext.addEventListener('click', () => {
+    showSlide(slideIndex += 1, lLargeImg);
+    focusThumnail(slideIndex, lthumbnails)
 });
 
-function openLightbox(n){
-    lightbox.style.display='grid';
-    showSlide(slideIndex=n+1,lLargeImg);
-    focusThumnail(slideIndex,lthumbnails)
+
+
+function openLightbox(n) {
+    lightbox.style.display = 'grid';
+    document.body.style.overflow = 'hidden';
+    showSlide(slideIndex = n + 1, lLargeImg);
+    focusThumnail(slideIndex, lthumbnails)
+}
+function closeLightbox() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
 }
 
-for(let i=0; i<lthumbnails.length;i++){
-    lthumbnails[i].addEventListener('click', ()=>{
-        showSlide(slideIndex=i+1 , lLargeImg);
-        focusThumnail(slideIndex,lthumbnails);
+for (let i = 0; i < lthumbnails.length; i++) {
+    lthumbnails[i].addEventListener('click', () => {
+        showSlide(slideIndex = i + 1, lLargeImg);
+        focusThumnail(slideIndex, lthumbnails);
     })
 }
 
-function focusThumnail(n,thumbnailArray){
+function focusThumnail(n, thumbnailArray) {
     let i;
     if (n > thumbnailArray.length) {
         slideIndex = 1;
     }
-    if(n<1){
+    if (n < 1) {
         slideIndex = thumbnailArray.length;
     }
-    for(i=0;i<thumbnailArray.length;i++){
+    for (i = 0; i < thumbnailArray.length; i++) {
         thumbnailArray[i].classList.remove('focus-img');
     }
-    thumbnailArray[slideIndex-1].classList.add('focus-img');
+    thumbnailArray[slideIndex - 1].classList.add('focus-img');
 }
-
-
-
-function showSlide(n,slidesArray) {
+function showSlide(n, slidesArray) {
     let i;
-    
+
     if (n > slidesArray.length) {
         slideIndex = 1;
     }
-    if(n<1){
+    if (n < 1) {
         slideIndex = slidesArray.length;
     }
-    for(i=0;i<slidesArray.length;i++){
+    for (i = 0; i < slidesArray.length; i++) {
         slidesArray[i].classList.add('hidden');
     }
-    console.log(slidesArray[slideIndex-1]);
-    slidesArray[slideIndex-1].classList.remove('hidden');
+    console.log(slidesArray[slideIndex - 1]);
+    slidesArray[slideIndex - 1].classList.remove('hidden');
 }
-
-
-
-
-
 
 function addProductToCart(quantity) {
     document.getElementById('cartNotification').style.display = 'block'
@@ -244,36 +247,3 @@ function deleteItemCart() {
     document.querySelector('#emptyCart').style.display = 'flex';
     document.getElementById('cartNotification').style.display = 'none'
 }
-
-/* when menu nav is open apply to body 
-    overflow: hidden; */
-/*
-
-// when thumbnail is click apply class .focus-img
-Your users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-    -use media queries and grid
-- See hover states for all interactive elements on the page
-    -use css to style hove or elements
-- Open a lightbox gallery by clicking on the large product image
-    -WHEN user clicks on large product
-    -DISPLAY lightbox gallery
-
-- Switch the large product image by clicking on the small thumbnail images
-    -WHEN user clicks on the small image
-    -APPLY overlay and border on small image
-    -CHANGE large image to small image
-- Add items to the cart
-    -WHEN user clicks on addToCart
-    -IF numberOfItems is grater than 0
-        -addToCart
-    ELSE display error
-
-
-- View the cart and remove items from it
-    -WHEN users clicks on cart icon
-    -DISPLAY cart content
-    -WHEN users click on bin icon
-    -DELETE itemfrom cart
-*/

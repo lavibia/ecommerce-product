@@ -66,8 +66,8 @@ header hr {
     z-index: 9999;
 }
 
-#mobile-nav .nav-container{
-   
+#mobile-nav .nav-container {
+
     width: 66vw;
     padding: 25px;
     height: 100%;
@@ -76,17 +76,20 @@ header hr {
     font-size: 18px;
     line-height: 26px;
 }
-#mobile-nav ul{
+
+#mobile-nav ul {
     margin-top: 40px;
     list-style-type: none;
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
-    
+
 }
-#mobile-nav li{
+
+#mobile-nav li {
     margin: 10px 0px;
 }
+
 header {
     padding: 24px;
     grid-area: 1/1/2/7;
@@ -113,8 +116,8 @@ header button,
 }
 
 
-#cart-holder{
-    display:none;
+#cart-holder {
+    display: none;
     gap: 10px;
     position: absolute;
     right: 8px;
@@ -123,15 +126,16 @@ header button,
     width: 360px;
     height: 256px;
     transition: 0.3s;
-    
-    box-shadow:0px 3px 8px hsla(0, 0%, 48%, 0.75);
+
+    box-shadow: 0px 3px 8px hsla(0, 0%, 48%, 0.75);
     background-color: var(--white);
     z-index: 99;
     padding: 16px;
     border-radius: 10px;
     border: 2px solid var(--neutral-light-blue);
 }
-#cart-holder #cartItems{
+
+#cart-holder #cartItems {
     display: none;
     margin: 0px;
     padding: 0px;
@@ -141,53 +145,60 @@ header button,
     gap: 10px;
 }
 
-#cartItems li{
+#cartItems li {
     padding: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 5px;
 }
-.cartItem img{
-    width:50px;
+
+.cartItem img {
+    width: 50px;
     height: 50px;
-        object-fit: cover;
-        border-radius: 4px;
+    object-fit: cover;
+    border-radius: 4px;
 }
-.cartItem .info{
+
+.cartItem .info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
-.info p:first-of-type{
+
+.info p:first-of-type {
     grid-area: 1/1/2/3;
 }
-.cartItem p{
+
+.cartItem p {
     font-size: 16px;
     color: var(--neutral-dark-blue);
 }
-.cartItem .total{
+
+.cartItem .total {
     font-weight: 700;
     color: var(--black);
 }
-#deleteItem{
+
+#deleteItem {
     border: none;
     background: none;
 }
-#deleteItem img{
+
+#deleteItem img {
     width: 14px;
     height: 15px;
-    object-fit:contain;
+    object-fit: contain;
 
     border-radius: 0px;
 }
 
-#cart-holder #btnCheckout{
+#cart-holder #btnCheckout {
     display: none;
     color: var(--white);
     font-size: 16px;
     font-weight: 700;
-    margin-bottom:  10px;
+    margin-bottom: 10px;
     gap: 10px;
     height: 56px;
     width: 100%;
@@ -195,39 +206,45 @@ header button,
     border-radius: 10px;
     background-color: var(--primary-orange);
 }
-#cart-holder #emptyCart{
+
+#cart-holder #emptyCart {
     font-weight: 700;
-       height: 300px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--neutral-dark-blue);
 }
-#cart-holder h5{
+
+#cart-holder h5 {
     font-size: 16px;
 }
-#cart-holder hr{
+
+#cart-holder hr {
     display: block;
     border: 1px solid var(--neutral-light-blue);
 }
-.right-header{
+
+.right-header {
 
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: end;
 }
-#goToCart{
+
+#goToCart {
     width: 55px;
     height: 100%;
 }
-#cartNotification{
+
+#cartNotification {
     display: none;
     font-size: 9px;
     font-weight: 700;
     color: white;
     background-color: var(--primary-orange);
-    position:relative;
+    position: relative;
     float: right;
     top: -5px;
     left: -22px;
@@ -244,7 +261,8 @@ header button,
     width: 50px;
     height: 50px;
 }
-#profile img:hover{
+
+#profile img:hover {
     border-radius: 50%;
     border: 1px solid var(--primary-orange);
 }
@@ -288,8 +306,9 @@ main {
     height: 12px;
     width: 6px;
 }
+
 .previousImg img:hover,
-.nextImg img:hover{
+.nextImg img:hover {
     filter: invert(52%) sepia(87%) saturate(1754%) hue-rotate(348deg) brightness(102%) contrast(101%);
 }
 
@@ -374,7 +393,8 @@ h1 {
     display: flex;
     flex-direction: column;
 }
-.product-form button:hover{
+
+.product-form button:hover {
     opacity: 0.5;
 }
 
@@ -487,7 +507,7 @@ footer a {
         grid-area: 2/1/3/3;
         align-self: flex-start;
         border: 1px solid var(--neutral-light-blue);
-    
+
     }
 
     #desktop-nav {
@@ -507,10 +527,11 @@ footer a {
 
         padding-bottom: 24px;
     }
-    
-     #desktop-nav li:hover{
-         border-bottom: 3px solid var(--primary-orange);
-     }
+
+    #desktop-nav li:hover {
+        border-bottom: 3px solid var(--primary-orange);
+    }
+
     main {
         grid-area: 2/1/6/7;
         height: fit-content;
@@ -526,28 +547,44 @@ footer a {
     footer {
         grid-area: 6/1/7/7;
     }
-    .lightbox{
+
+    .lightbox {
         display: none;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(12, 1fr);
         gap: 30px;
-        padding:0px 10%;
+        padding: 0px 10%;
         position: fixed;
         top: 0px;
         left: 0px;
         box-shadow:
-        0 10px 27px rgba(0, 0, 0, 0.05);
+            0 10px 27px rgba(0, 0, 0, 0.05);
         background-color: var(--lightbox-bg-color);
         width: 100%;
         height: 100%;
         z-index: 9999;
     }
-    .lightbox-largeImg{
+
+    #lightbox-exit {
+        grid-area: 1/9/2/10;
+        border: none;
+        background: none;
+        align-self: flex-end;
+        margin-bottom: -15px;
+        justify-self: end;
+    }
+
+    #lightbox-exit img:hover {
+        filter: invert(52%) sepia(87%) saturate(1754%) hue-rotate(348deg) brightness(102%) contrast(101%);
+    }
+
+    .lightbox-largeImg {
         grid-area: 2/4/10/10;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(6, 1fr);
     }
+
     .lightbox-largeImg button {
         margin: 5px;
         width: 40px;
@@ -558,19 +595,19 @@ footer a {
         align-self: center;
         justify-self: center;
     }
-    
-    .lightbox-largeImg
-    #previousImg {
+
+    .lightbox-largeImg #previousImg {
         grid-area: 3/1/4/2;
         justify-self: start;
         margin-left: -15px;
     }
-    .lightbox-largeImg
-    #nextImg {
+
+    .lightbox-largeImg #nextImg {
         grid-area: 3/6/4/7;
         justify-self: end;
         margin-right: -15px;
     }
+
     .lightbox-largeImg .largeImages {
         grid-area: 1/1/7/7;
         z-index: -1;
@@ -578,35 +615,44 @@ footer a {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-    
+
     }
+
     .largeImages img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    
+
     #previousImg img,
     #nextImg img {
         height: 12px;
         width: 6px;
     }
+
     #previousImg img:hover,
-    #nextImg img:hover{
+    #nextImg img:hover {
         filter: invert(52%) sepia(87%) saturate(1754%) hue-rotate(348deg) brightness(102%) contrast(101%);
     }
 
-    .lightbox-thumbnails{
+    .lightbox-thumbnails {
         grid-area: 10/4/12/10;
         display: flex;
         flex-direction: row;
         gap: 24px;
     }
+
     .lightbox-thumbnails img {
         width: calc(25% - 18px);
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
+    }
+
+    .lightbox-thumbnails img:not(.focus-img):hover {
+        mask-image:
+            linear-gradient(180deg, #00000096 25%, rgba(0, 0, 0, 0.623) 25%);
+        mask-size: cover;
     }
 
     .desktop-slideholder {
@@ -628,19 +674,27 @@ footer a {
         gap: 24px;
     }
 
-    .focus-img{
-        opacity: 0.3;
+    .focus-img {
+
         border: 3px solid var(--primary-orange);
-       
+        mask-image:
+            linear-gradient(180deg, #0000004d 25%, rgba(0, 0, 0, 0.308) 25%);
+        mask-size: cover;
+
     }
+
     .thumbnails img {
         width: calc(25% - 18px);
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
     }
+
     .thumbnails img:not(.focus-img):hover {
-        opacity: 0.6;
+
+        mask-image:
+            linear-gradient(180deg, #00000096 25%, rgba(0, 0, 0, 0.623) 25%);
+        mask-size: cover;
     }
 
     .productDescriptionHolder {
@@ -682,39 +736,3 @@ footer a {
     }
 
 }
-
-/* ## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
-
-## Colors
-
-### Primary
-
-- Orange: hsl(26, 100%, 55%)
-- Pale orange: hsl(25, 100%, 94%)
-
-### Neutral
-
-- Very dark blue: hsl(220, 13%, 13%)
-- Dark grayish blue: hsl(219, 9%, 45%)
-- Grayish blue: hsl(220, 14%, 75%)
-- Light grayish blue: hsl(223, 64%, 98%)
-- White: hsl(0, 0%, 100%)
-- Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%)
-
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 16px
-
-### Font
-
-- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
-- Weights: 400, 700 */

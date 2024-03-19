@@ -45,7 +45,9 @@
     </div>
     <div class="right-header">
       <button id="goToCart" type="button" aria-label="Open cart"><img src="<%=require('./assets/icon-cart.svg')%>"
-          alt="cart icon"><div id="cartNotification"></div></button>
+          alt="cart icon">
+        <div id="cartNotification"></div>
+      </button>
       <div id="cart-holder">
         <h5>Cart</h5>
         <hr>
@@ -90,10 +92,12 @@
       </div>
     </div>
     <div class="lightbox">
+      <button id="lightbox-exit" type="button" aria-label="Exit lightbox"> <img
+          src="<%=require('./assets/icon-close.svg')%>" alt="exit icon"></button>
       <div class="lightbox-largeImg">
         <button id="previousImg" type="button" aria-label="Show previeus image">
           <img src="<%=require('./assets/icon-previous.svg')%>" alt="back arrow"></button>
-  
+
         <div class="largeImages">
           <img src="<%=require('./assets/image-product-1.jpg')%>" alt="Sneaker fall limited edition 1">
           <img class="hidden" src="<%=require('./assets/image-product-2.jpg')%>" alt="Sneaker fall limited edition 2">
@@ -128,7 +132,8 @@
       <div class="item-quantity">
         <button type="button" aria-label="Decrease quantity"> <img src="<%=require('./assets/icon-minus.svg')%>"
             alt="Minus sign"></button>
-        <input type="number" name="quantity" value="0" min="1" max="100" class="quantity" aria-label="Quantity" readonly>
+        <input type="number" name="quantity" value="0" min="1" max="100" class="quantity" aria-label="Quantity"
+          readonly>
         <button type="button" aria-label="Increase quantity"> <img src="<%=require('./assets/icon-plus.svg')%>"
             alt="Plus sign"></button>
       </div>
@@ -147,26 +152,6 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>.
       Coded by <a href="https://github.com/lavibia"> Lavinia</a>.</p>
   </footer>
-  <!--Accessability
-
-        
-     Alt Text for Enhanced Screen Reader Compatibility
-Alt text is crucial for visually impaired users who rely on screen readers. By providing descriptive alternative text for images, you not only make your e-commerce site more navigable for these users but also boost your SEO through improved image search rankings.
-
-2. Keyboard-Friendly Navigation
-Ensure that all interactive elements on your website can be navigated using a keyboard. This is essential for users who are unable to utilize a mouse or other pointing devices due to physical disabilities.
-
-3 Optimized Text for Visual Accessibility
-Choose fonts that are clear and easy to read, and ensure they contrast well with the background. Small, blurry, or low-contrast text can pose challenges for users with visual impairments.
-
-4. Accessible Online Forms
-Online forms should be straightforward and user-friendly. Implement clear labels and provide instructions, ensuring that any errors are clearly explained in simple language, aiding those with cognitive or visual impairments.
-
-5. Video and Audio Content Accessibility
-Include captions or transcripts for any multimedia content. This is vital for users who are deaf or hard of hearing, ensuring they have equal access to the information.
-
-6. Consistency in Navigation for Cognitive Accessibility
-A consistent and logical layout aids users with cognitive disabilities, making it easier for people to understand and navigate your site.-->
 
 </body>
 
